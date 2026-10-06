@@ -24,10 +24,18 @@ const SignUp = ({ onSwitchToLogin }) => {
     }
   };
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log("SignUp Submitted:", formData);
+  //   navigate("/onboarding");
+  // };
+
+ const handleSubmit = (e) => {
     e.preventDefault();
     console.log("SignUp Submitted:", formData);
-    navigate("/onboarding");
+
+    // Directly navigate to the dashboard
+    navigate("/dashboard", { replace: true });
   };
 
   return (
