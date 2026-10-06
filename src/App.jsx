@@ -1,17 +1,9 @@
-import { useState } from 'react'
-import './App.css'
+import React from "react";
+
+import AppRoutes from "./user/routes/AppRoutes";
 
 function App() {
-
-
-  return (
-    <>
-     <div className='text-center text-4xl'>
-      regul massage
-     </div>
-
-    </>
-  )
+  return <AppRoutes />;
 }
 
-export default App
+export default App;
