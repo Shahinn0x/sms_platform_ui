@@ -14,8 +14,6 @@ function Navbar() {
   return (
     <header className="relative z-50 w-full border-b border-gray-100 bg-white">
       <div className="mx-auto flex h-[72px] max-w-[1400px] items-center justify-between px-4 sm:px-8 lg:px-12">
-        
-        {/* Brand Logo */}
         <Link to="/" className="flex items-center gap-3 cursor-pointer">
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-orange-500 text-white shrink-0">
             <Send size={18} strokeWidth={2.5} />
@@ -31,23 +29,33 @@ function Navbar() {
           </div>
         </Link>
 
-        {/* Desktop Nav Items */}
         <nav className="hidden items-center gap-9 md:flex">
-          <a href="#features" className="text-sm font-medium text-gray-600 transition hover:text-orange-500">
+          <a
+            href="#features"
+            className="text-sm font-medium text-gray-600 transition hover:text-orange-500"
+          >
             Features
           </a>
-          <a href="#pricing" className="text-sm font-medium text-gray-600 transition hover:text-orange-500">
+          <a
+            href="#pricing"
+            className="text-sm font-medium text-gray-600 transition hover:text-orange-500"
+          >
             Pricing
           </a>
-          <a href="#resources" className="text-sm font-medium text-gray-600 transition hover:text-orange-500">
+          <a
+            href="#resources"
+            className="text-sm font-medium text-gray-600 transition hover:text-orange-500"
+          >
             Resources
           </a>
-          <a href="#contact" className="text-sm font-medium text-gray-600 transition hover:text-orange-500">
+          <a
+            href="#contact"
+            className="text-sm font-medium text-gray-600 transition hover:text-orange-500"
+          >
             Contact
           </a>
         </nav>
 
-        {/* Desktop Login Button */}
         <div className="hidden items-center gap-4 md:flex">
           <span className="hidden text-xs text-gray-500 lg:block">
             Already have an account?
@@ -63,7 +71,6 @@ function Navbar() {
           </button>
         </div>
 
-        {/* Mobile menu trigger */}
         <div className="flex items-center md:hidden">
           <button
             type="button"
@@ -75,7 +82,6 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
         <div className="border-t border-gray-100 bg-white px-6 py-4 md:hidden">
           <nav className="flex flex-col gap-4">

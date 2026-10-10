@@ -134,7 +134,7 @@ const Login = ({ onSwitchToSignUp }) => {
                 </div>
               </div>
 
-              {/* Remember Me & Forgot Password */}
+              
               <div className="flex items-center justify-between pt-1">
                 <label className="flex items-center space-x-2 cursor-pointer">
                   <input
@@ -150,7 +150,7 @@ const Login = ({ onSwitchToSignUp }) => {
                 </a>
               </div>
 
-              {/* Submit Button */}
+              
               <button
                 type="submit"
                 className="w-full py-3.5 px-4 bg-orange-500 hover:bg-orange-600 text-white rounded-xl text-xs sm:text-sm font-bold shadow-md shadow-orange-500/20 hover:shadow-lg transition-all flex items-center justify-center space-x-2 cursor-pointer mt-2"
@@ -160,7 +160,7 @@ const Login = ({ onSwitchToSignUp }) => {
               </button>
             </form>
 
-            {/* Divider */}
+          
             <div className="relative my-4">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-slate-200" />
@@ -170,7 +170,7 @@ const Login = ({ onSwitchToSignUp }) => {
               </div>
             </div>
 
-            {/* Google Sign In */}
+            
             <button
               type="button"
               className="w-full py-3 px-4 bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center space-x-2 cursor-pointer"

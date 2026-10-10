@@ -12,7 +12,7 @@ const steps = [
 const OnboardingSidebar = () => {
   return (
     <>
-      {/* Desktop/Tablet Sidebar */}
+    
       <aside className="hidden md:flex w-64 border-r border-gray-100 bg-[#F3F8FE] p-6 flex-col space-y-4 shrink-0">
         {steps.map((step) => (
           <NavLink

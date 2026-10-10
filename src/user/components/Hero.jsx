@@ -13,7 +13,6 @@ function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#f7faff]">
       <div className="mx-auto flex flex-col lg:grid max-w-[1400px] items-center gap-6 sm:gap-10 px-4 py-8 sm:px-8 sm:py-16 lg:min-h-[550px] lg:grid-cols-[0.95fr_1.05fr] lg:px-12 lg:py-20">
-        
         {/* Header Text Block */}
         <div className="relative z-20 max-w-[620px] text-left">
           <div className="mb-3 inline-flex rounded-full bg-orange-50 px-3.5 py-1.5 sm:mb-7 sm:px-4 sm:py-2">
@@ -62,7 +61,6 @@ function Hero() {
           </div>
         </div>
 
-        {/* Dashboard Image Block */}
         <div className="relative flex min-h-[220px] items-center justify-center sm:min-h-[430px] lg:min-h-[500px] w-full my-1 lg:my-0">
           <div className="absolute right-[2%] top-[8%] h-[160px] w-[200px] rounded-full bg-blue-300/30 blur-[50px] sm:h-[360px] sm:w-[500px] sm:blur-[90px]" />
           <div className="absolute left-[12%] top-[22%] h-[140px] w-[140px] rounded-full bg-pink-300/30 blur-[45px] sm:h-[260px] sm:w-[280px] sm:blur-[85px]" />
@@ -77,7 +75,6 @@ function Hero() {
           </div>
         </div>
 
-        {/* Mobile & Tablet Action Buttons */}
         <div className="w-full lg:hidden pt-2">
           <div className="flex flex-row items-center gap-3 w-full">
             <button
@@ -104,7 +101,6 @@ function Hero() {
             </button>
           </div>
         </div>
-
       </div>
     </section>
   );

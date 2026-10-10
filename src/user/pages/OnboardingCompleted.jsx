@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // 1. Import useNavigate
 import { 
   ArrowRight, 
   Send, 
@@ -9,6 +10,8 @@ import {
 import completedImg from "../assets/images/completed.png";
 
 const OnboardingCompleted = ({ onGoToDashboard }) => {
+  const navigate = useNavigate(); // 2. Initialize navigate hook
+
   const quickActions = [
     {
       id: "campaign",
@@ -44,19 +47,23 @@ const OnboardingCompleted = ({ onGoToDashboard }) => {
     },
   ];
 
+  // 3. Handle navigation fallback cleanly
+  const handleDashboardClick = () => {
+    if (onGoToDashboard) {
+      onGoToDashboard();
+    } else {
+      navigate("/dashboard", { replace: true });
+    }
+  };
+
   return (
     <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-8 text-center overflow-x-hidden [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
 
       <div className="relative flex justify-center items-center py-4 sm:py-8">
         <div className="relative w-full max-w-[300px] sm:max-w-md lg:max-w-xl flex justify-center items-center">
-          
-       
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] bg-gradient-to-tr from-emerald-400/40 via-teal-300/30 to-green-500/30 rounded-full blur-3xl transform scale-110 -z-10" />
-
           <div className="absolute -top-4 -right-4 w-[60%] h-[60%] bg-gradient-to-br from-blue-400/35 via-indigo-400/25 to-sky-300/30 rounded-full blur-2xl transform scale-100 -z-10" />
-
           <div className="absolute -bottom-4 -left-4 w-[55%] h-[55%] bg-gradient-to-tl from-purple-400/25 via-orange-300/20 to-pink-400/20 rounded-full blur-2xl transform scale-100 -z-10" />
-
 
           <img
             src={completedImg}
@@ -75,7 +82,6 @@ const OnboardingCompleted = ({ onGoToDashboard }) => {
         </p>
       </div>
 
-     
       <div className="mt-6 sm:mt-10 bg-slate-50/80 border border-slate-200/80 rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 shadow-sm">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {quickActions.map((action) => {
@@ -104,11 +110,10 @@ const OnboardingCompleted = ({ onGoToDashboard }) => {
         </div>
       </div>
 
-      
       <div className="mt-6 sm:mt-8 flex justify-center">
         <button
           type="button"
-          onClick={onGoToDashboard}
+          onClick={handleDashboardClick} // 4. Updated onClick event
           className="w-full sm:w-auto min-w-[220px] flex items-center justify-center space-x-2 px-8 py-3.5 bg-orange-500 hover:bg-orange-600 text-white rounded-xl sm:rounded-2xl text-xs sm:text-base font-bold shadow-md hover:shadow-lg transition-all cursor-pointer"
         >
           <span>Go to Dashboard</span>

@@ -61,7 +61,7 @@ const VerifyContact = ({ onNext, onBack, phoneNumber = "+91 98765 43210" }) => {
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-2 text-slate-800 overflow-x-hidden">
-      {/* Header Section */}
+      
       <div className="text-left mb-6 sm:mb-8">
         <h1 className="text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-3 sm:mb-5">
           Verify Your Contact
@@ -77,9 +77,9 @@ const VerifyContact = ({ onNext, onBack, phoneNumber = "+91 98765 43210" }) => {
         </p>
       </div>
 
-      {/* Content Section */}
+     
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
-        {/* Illustration */}
+   
         <div className="lg:col-span-5 flex justify-center items-center relative py-4 sm:py-10">
           <div className="absolute w-[260px] h-[260px] sm:w-[480px] sm:h-[480px] -z-10 flex items-center justify-center pointer-events-none overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/60 via-indigo-500/80 to-purple-600/70 rounded-full blur-2xl sm:blur-3xl transform scale-120 sm:scale-150" />
